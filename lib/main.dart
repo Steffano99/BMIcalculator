@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,8 +27,8 @@ class BMICalculatorHome extends StatefulWidget {
 class _BMICalculatorHomeState extends State<BMICalculatorHome> {
   final TextEditingController heightController = TextEditingController();
   final TextEditingController weightController = TextEditingController();
-  String bmiResult = '';
-  String bmiStatus = '';
+  late String bmiResult;
+  late String bmiStatus;
 
   void calculateBMI() {
     double height = double.parse(heightController.text);
@@ -54,18 +56,16 @@ class _BMICalculatorHomeState extends State<BMICalculatorHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.red,
         title: const Center(
           child: Text(
             'BMI Calculator',
-            style: TextStyle(
-              color: Colors.white,
-            ),
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(15.0),git status
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
             TextField(
@@ -82,7 +82,7 @@ class _BMICalculatorHomeState extends State<BMICalculatorHome> {
               controller: weightController,
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                labelText: 'Enter ++your weight in kg',
+                labelText: 'Enter your weight in kg',
                 border:
                     OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
               ),
