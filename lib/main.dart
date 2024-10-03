@@ -65,7 +65,7 @@ class _BMICalculatorHomeState extends State<BMICalculatorHome> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(15.0),git status
         child: Column(
           children: [
             TextField(
