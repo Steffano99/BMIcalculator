@@ -89,7 +89,7 @@ class _BMICalculatorHomeState extends State<BMICalculatorHome> {
             ),
             const SizedBox(height: 16),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.red),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               onPressed: calculateBMI,
               child: const Text(
                 'CALCULATE',
